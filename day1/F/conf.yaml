@@ -1,0 +1,65 @@
+args:
+  n: 1000
+compile:
+  c: -O2 -std=c11
+  cpp: -O2 -std=c++14
+  java: ''
+  pas: -O2
+  py: ''
+data:
+- cases:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  - 8
+  - 9
+  - 10
+  - 11
+  - 12
+  - 13
+  - 14
+  - 15
+  - 16
+  - 17
+  - 18
+  - 19
+  - 20
+  - 21
+  - 22
+  - 23
+  - 24
+  - 25
+  - 26
+  - 27
+  - 28
+  - 29
+  - 30
+  score: 100
+folder: problem
+memory limit: 512 MiB
+name: Graph
+partial score: false
+samples:
+- cases:
+  - 1
+time limit: 1.0
+title:
+  # en: Graph
+  zh-cn: 图
+type: program
+users:
+  lsq:
+    brute:
+      expected: == 0
+      path: lsq/brute.cpp
+    std:
+      expected: == 100
+      path: lsq/std.cpp
+    std_ite:
+      expected: == 0
+      path: lsq/std_ite.cpp
+version: 2

@@ -1,0 +1,35 @@
+args:
+  T: 300000
+compile:
+  c: -O2 -std=c11
+  cpp: -O2 -std=c++14
+  java: ''
+  pas: -O2
+  py: ''
+data:
+- cases:
+  - 1
+  score: 100
+folder: problem
+memory limit: 512 MiB
+name: round-robin
+partial score: false
+pre: []
+samples:
+- cases:
+  - 1
+  - 2
+time limit: 1.0
+title:
+  zh-cn: 循环赛
+type: program
+users:
+  ckw:
+    std:
+      expected: == 100
+      path: ckw/std.cpp
+  zyb:
+    std:
+      expected: == 100
+      path: zyb/std.cpp
+version: 2

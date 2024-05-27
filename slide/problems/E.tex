@@ -1,0 +1,76 @@
+\frame
+{
+  \frametitle{题目大意}
+
+ 	称一张 $n$ 个点的竞赛图为 $(n,m)$-图，如果对其中任意 $m$ 个点，其中同时存在全胜和全败者。
+
+	求在所有 $(n,m)$-图中点度集合大小最少是多少。
+
+}
+
+\frame
+{
+
+
+  \frametitle{题解}
+
+	打表找规律题。	
+
+	记答案为 $F(n,m)$。结论：
+	
+	\begin{itemize}
+
+	\item $F(n, 2)=2 - (n \bmod 2)$
+	\item $\forall m\in\left[3, \left\lfloor\frac{n}{2}\right\rfloor+2\right], F(n, m) = n$
+	\item otherwise, $F(n, m) = n - 2\times \left(m - \left\lfloor\frac{n}{2}\right\rfloor - 2\right)$
+
+	\end{itemize}
+
+}
+
+\frame
+{
+  \frametitle{（不是）证明}
+
+对 $m=2$ 相当于没有限制。\pause
+
+由于所有点度和为 $\frac{n(n-1)}{2}$，平均点度是 $\frac{n-1}{2}$，所以当 $n$ 是偶数的时候 $F(n, m)\ge 2$。\pause
+
+容易根据 $n$ 的奇偶性构造使 $F(2k+1, 2)=1, F(2k, 2)=2$。
+
+}
+
+\frame
+{
+  \frametitle{（不是）证明}
+
+	考察一些 corner case。\pause
+
+	对 $m=3$ 相当于任意三点都有全序关系，很容易立刻发现此时不存在环，因此答案是 $n$。\pause
+
+	根据样例可以猜测当 $m$ 在某个范围内的时候答案保持为 $n$，因此可以猜测考虑递推。\pause
+
+	实际上可以证明（分了五六种情况讨论太复杂了就不写出来了），当 $4\le m<n$ 时，有 $F(n,m)=F(n-2, m-1)+2$，方法大概是尝试证明度数最小/最大的点唯一且条件可以归纳。
+
+}
+
+\frame
+{
+  \frametitle{（不是）证明}
+
+	但是上述过程的条件会在 $n=m$ 时无法继续归纳，需要特判。\pause
+
+	此时由于存在唯一全胜和全败者，所以答案至少为 $3$；同 $m=2$，依据 $n$ 的奇偶性可能至少为 $4$。容易构造对应方案。\pause
+
+	实际上删去最大度和最小度点后相当于没有额外限制的 $m=2$，所以 $F(n,n)=F(n-2,2)+2$。
+
+}
+
+
+\frame
+{
+  \frametitle{（不是）证明}
+
+	根据上述递推可以得到开始的结果。
+
+}

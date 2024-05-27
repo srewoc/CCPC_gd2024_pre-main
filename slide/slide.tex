@@ -1,0 +1,117 @@
+\documentclass[dvipsnames]{ctexbeamer}
+
+\usepackage{bm}
+\usepackage{mathtools}
+\usepackage{stmaryrd}
+\usepackage{color, xcolor}
+\usepackage{tikz}
+\usetikzlibrary{arrows, positioning}
+
+\usepackage{fourier}
+\usepackage{nicefrac}
+\usepackage{ulem}
+
+\usepackage[thicklines]{cancel}%cancel
+\usepackage{array,multicol,multirow}
+\usepackage{diagbox}
+\usepackage{geometry}
+
+\usetikzlibrary{arrows, positioning, quotes}
+
+
+
+
+\usepackage[
+    type={CC},
+    modifier={by},
+    version={4.0},
+    % imagemodifier={-80x15},
+    lang={chinese-utf8},
+]{doclicense}
+
+% \usepackage[orientation=landscape,size=custom,width=16,height=9,scale=0.5,debug]{beamerposter}
+
+\newtheorem{remark}[theorem]{注记}
+
+\DeclareMathOperator{\mex}{mex}
+\newcommand{\me}{\mathrm{e}}
+
+\newcommand{\Dname}{三染色}
+\newcommand{\sfT}{\mathsf T}
+
+% \usetheme{Berkeley}
+\usetheme{metropolis}
+% \usecolortheme{spruce}
+\usefonttheme{professionalfonts,structurebold}
+
+\title{2024年广东省大学生程序设计竞赛(GDCPC) \\ 暨CCPC广州邀请赛}
+% \subtitle{Selected Topics in Graph Enumeration {\color{red} (draft)}}
+\author{}
+\institute{清华大学学生算法协会}
+\date{2024 年 5 月 26 日}
+
+\begin{document}
+
+\frame{\titlepage}
+
+\frame{
+    感谢 ~\textsc{Mys.C.K.}, \textsc{liuzhangfeiabc}, \textsc{Itst}, \textsc{SpiritualKhorosho}, \textsc{EliminateSpace}, \textsc{xiaolilsq}, \textsc{gyh-20}, \textsc{JohnVictor36}, \textsc{Renshey}, \textsc{QAQAutoMaton} 负责命题和验题工作.
+
+}
+
+% \section[Outline]{}
+\frame[allowframebreaks]{
+    \tableofcontents[sections={1-4}]
+    \framebreak
+    \tableofcontents[sections={5-8}]
+    \framebreak
+    \tableofcontents[sections={9-10}]
+}
+
+\section{I 不等式 by \itshape JohnVictor36}
+\include{problems/I}
+
+\section{G Menji 和 gcd by \itshape gyh-20}
+\include{problems/G}
+
+\section{C DFS 序 by \itshape EliminateSpace}
+\include{problems/C}
+
+\section{E 循环赛 by \itshape ckw20}
+\include{problems/E}
+
+
+
+
+\section{B 腊肠披萨 by \itshape SpiritualKhorosho}
+\include{problems/B}
+
+
+\section{J 另一个计数问题 by \itshape Renshey}
+\include{problems/J}
+
+\section{F 图 by \itshape xiaolilsq}
+\include{problems/F}
+
+
+\section{H 小班课 by \itshape gyh-20}
+\include{problems/H}
+
+
+
+
+
+\section{A 田字格 by \itshape Itst}
+\include{problems/A}
+
+\section{D 拨打电话 by \itshape SpiritualKhorosho}
+\include{problems/D}
+
+
+\begin{frame}{}
+    \begin{center}
+        \Large 感谢倾听!
+    \end{center}
+\end{frame}
+
+\end{document}
